@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="cmpt276.projectUI.gamePage">
+
+    <Chronometer
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#1B5E20"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/chicle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tblDraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tblDiscard"
+        app:layout_constraintVertical_bias="0.517" />
+
+    <TableLayout
+        android:id="@+id/tblDiscard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.261" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FCE4EC"
+        android:text="@string/addScore"
+        android:textColor="#1B5E20"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:fontFamily="@font/chicle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nickname"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.468" />
+
+    <EditText
+        android:id="@+id/nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="104dp"
+        android:layout_marginRight="104dp"
+        android:ems="10"
+        android:hint="@string/nicknameHint"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:fontFamily="@font/chicle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/winMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:shadowColor="#80CBC4"
+        android:shadowRadius="25"
+        android:text="@string/winMessage"
+        android:textColor="#1B5E20"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:fontFamily="@font/chicle"
+        app:layout_constraintBottom_toTopOf="@+id/nickname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/exMessage"
+        android:layout_width="231dp"
+        android:layout_height="278dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="384dp"
+        android:shadowColor="#80CBC4"
+        android:shadowRadius="25"
+        android:text="@string/exMessage"
+        android:textColor="#1B5E20"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:fontFamily="@font/chicle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E1F5FE"
+        android:text="@string/cancelScore"
+        android:textColor="#1B5E20"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:fontFamily="@font/chicle"
+        app:layout_constraintStart_toEndOf="@+id/nickname"
+        app:layout_constraintTop_toBottomOf="@+id/addButton" />
+
+    <TextView
+        android:id="@+id/txtDiscard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/discard_pile"
+        android:textSize="30sp"
+        app:fontFamily="@font/chicle"
+        app:layout_constraintBottom_toTopOf="@+id/tblDiscard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/draw_pile"
+        android:textSize="30sp"
+        app:fontFamily="@font/chicle"
+        app:layout_constraintBottom_toTopOf="@+id/tblDraw"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
